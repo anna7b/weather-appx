@@ -29,7 +29,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("icon");
+  let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.temperature.current;
 
@@ -43,7 +43,9 @@ function displayTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  iconElement.setAttribute("alt", response.data.condition.description);
+  iconElement.setAttribute("alt", `${response.data.condition.description}`);
+
+  getForecast(response.data.city);
 }
 
 function search(city) {
