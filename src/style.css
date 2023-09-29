@@ -79,3 +79,20 @@ a {
   margin-top: 25px;
   text-align: center;
 }
+
+.weather-forecast-temperatures-min {
+  opacity: 0.6;
+}
+.first-icon {
+  width: 90px;
+  margin: 5px;
+}
+.extra-icon {
+  width: 60px;
+}
+
+small.footer {
+  text-align: center;
+  display: block;
+  font-size: 15px;
+}
